@@ -8,8 +8,8 @@
 在 FinalShell 连接 VPS 后，以 root 身份在 SSH 终端执行：
 
 ```bash
-install -d -m 700 /root/x-ui-multiplier-installer
-curl -fsSL --retry 3 --connect-timeout 15 https://raw.githubusercontent.com/gavinsama/3x-ui-traffic-multiplier-installer/main/install-multiplier.sh -o /root/x-ui-multiplier-installer/install-multiplier.sh
+install -d -m 700 /root/x-ui-multiplier-installer &&
+curl -fsSL --retry 3 --connect-timeout 15 https://raw.githubusercontent.com/gavinsama/3x-ui-traffic-multiplier-installer/main/install-multiplier.sh -o /root/x-ui-multiplier-installer/install-multiplier.sh &&
 printf '%s  %s\n' '4cddc3059cba774b27ac9327567bc7260b9104167c0700f01f8baf314510ea4e' '/root/x-ui-multiplier-installer/install-multiplier.sh' | sha256sum -c - && bash /root/x-ui-multiplier-installer/install-multiplier.sh
 ```
 
